@@ -25,3 +25,9 @@ Production integration requires authentication and email verification services, 
 ## Validation
 
 JavaScript syntax and DOM-based interaction checks passed for password mismatch, invalid verification code, account data transfer, verification, free-score navigation, Pro checkout, report rendering, and restart. Visual browser validation was unavailable in the authoring environment.
+
+## Account entry options
+
+The signup screen now includes **Have an account? Sign in**, **Sign in with Google**, and **Back to Agentix**. Sign-in has email/password and Google entry points. Google opens a clearly labeled demo-account dialog; selecting it during signup preserves company details and skips password/email verification for that demo identity. Back buttons return from verification, plans, checkout, and report without restarting signup.
+
+Email and Google sign-in remain simulated. Replace `signin`, `googlePreview`, and `openDemoWorkspace` in `app.js` with the production authentication integration before launch. No Google OAuth request or password verification is implemented in this design preview.
